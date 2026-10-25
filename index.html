@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<title>拆一下</title>
+
+<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <h1>拆一下</h1>
+    <p class="subtitle">不想做的事，拆成能迈出的第一步</p>
+    <button id="settingsBtn" class="icon-btn" aria-label="设置">⚙️</button>
+</header>
+
+<main id="main">
+
+    <section id="inputSection">
+        <textarea
+            id="taskInput"
+            placeholder="写下你现在不想做的事，比如“洗澡”“写作业”……"
+            rows="2"
+        ></textarea>
+        <button id="breakBtn">帮我拆解</button>
+    </section>
+
+    <section id="resultSection" class="hidden">
+        <div id="resultCard"></div>
+        <button id="retryBtn" class="secondary-btn hidden">换一种拆法</button>
+    </section>
+
+    <section id="historySection">
+        <h2>最近记录</h2>
+        <div id="historyList"></div>
+    </section>
+
+</main>
+
+<!-- 设置面板 -->
+<div id="settingsPanel" class="modal hidden">
+    <div class="modal-card">
+        <div class="panel-header">
+            <h2>设置</h2>
+            <button id="closeSettingsBtn" class="panel-close-btn">✕</button>
+        </div>
+        <div class="setting-group">
+            <label>OpenRouter API Key
+                <input type="password" id="apiKeyInput" placeholder="sk-or-...">
+            </label>
+            <p class="hint">和小克共用同一个 Key 也可以，直接粘贴进来就行。</p>
+        </div>
+    </div>
+</div>
+
+<div id="toastContainer"></div>
+
+<script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
